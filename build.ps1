@@ -1,11 +1,12 @@
 # prepare
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=D:\git\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_OVERLAY_PORTS=deps\vcpkg-ports -DCLI_OVPNDCOWIN=ON
+set VCPKG_ROOT="D:\git\vcpkg"
+cmake --preset win-amd64-release
 
 # build targets
-cmake --build build --config Release --target ovpnagent
+cmake --build --preset win-amd64-release --target ovpnagent
 
-cmake --build build --config Release --target omicliagent
-cmake --build build --config Release --target omicli
+cmake --build --preset win-amd64-release --target omicliagent
+cmake --build --preset win-amd64-release --target omicli
 
-cmake --build build --config Release --target ovpncliagent
-cmake --build build --config Release --target ovpncli
+cmake --build --preset win-amd64-release --target ovpncliagent
+cmake --build --preset win-amd64-release --target ovpncli
