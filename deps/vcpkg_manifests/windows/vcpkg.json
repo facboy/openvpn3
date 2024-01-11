@@ -1,19 +1,19 @@
 {
-    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
-    "name": "openvpn3",
-    "version-string": "3.8",
-    "dependencies": [
-        "asio",
-        "gtest",
-        "jsoncpp",
-        "lz4",
-        "openssl",
-        "tap-windows6",
-        "xxhash",
-        {
-            "name": "pkgconf",
-            "host": true
-        }
-    ]
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "openvpn3",
+  "version-string": "3.8",
+  "dependencies": [
+    "asio",
+    "gtest",
+    "jsoncpp",
+    "lz4",
+    "openssl",
+    "tap-windows6",
+    "xxhash",
+    {
+      "name": "pkgconf",
+      "host": true
+    }
+  ],
+  "builtin-baseline": "b1d8051c9259b82fda906e0e8249e7d848efdbaa"
 }
-
