@@ -6,13 +6,15 @@ Set-Location "$vcpkg_manifest_dir"
 vcpkg x-update-baseline
 Set-Location "$PSScriptRoot"
 
+$parallel = 15
+
 cmake --preset win-amd64-release
 
 # build targets
-cmake --build --preset win-amd64-release --target ovpnagent
+cmake --build --preset win-amd64-release --target ovpnagent --parallel "$parallel"
 
-cmake --build --preset win-amd64-release --target omicliagent
-cmake --build --preset win-amd64-release --target omicli
+cmake --build --preset win-amd64-release --target omicliagent --parallel "$parallel"
+cmake --build --preset win-amd64-release --target omicli --parallel "$parallel"
 
-cmake --build --preset win-amd64-release --target ovpncliagent
-cmake --build --preset win-amd64-release --target ovpncli
+cmake --build --preset win-amd64-release --target ovpncliagent --parallel "$parallel"
+cmake --build --preset win-amd64-release --target ovpncli --parallel "$parallel"
