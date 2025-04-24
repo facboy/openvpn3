@@ -1,5 +1,5 @@
 # prepare
-set VCPKG_ROOT="D:\git\vcpkg"
+#set VCPKG_ROOT="D:\git\vcpkg"
 
 $vcpkg_manifest_dir = Join-Path "$PSScriptRoot" "deps\vcpkg_manifests\windows"
 Set-Location "$vcpkg_manifest_dir"
@@ -8,13 +8,13 @@ Set-Location "$PSScriptRoot"
 
 $parallel = 15
 
-cmake --preset win-amd64-release
+cmake --preset win-x64-release
 
 # build targets
-cmake --build --preset win-amd64-release --target ovpnagent --parallel "$parallel"
+cmake --build --preset win-x64-release --target ovpnagent --parallel "$parallel"
 
-cmake --build --preset win-amd64-release --target omicliagent --parallel "$parallel"
-cmake --build --preset win-amd64-release --target omicli --parallel "$parallel"
+cmake --build --preset win-x64-release --target omicliagent --parallel "$parallel"
+cmake --build --preset win-x64-release --target omicli --parallel "$parallel"
 
-cmake --build --preset win-amd64-release --target ovpncliagent --parallel "$parallel"
-cmake --build --preset win-amd64-release --target ovpncli --parallel "$parallel"
+cmake --build --preset win-x64-release --target ovpncliagent --parallel "$parallel"
+cmake --build --preset win-x64-release --target ovpncli --parallel "$parallel"
