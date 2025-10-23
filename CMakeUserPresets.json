@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "my-release",
+      "inherits": [ "win-x64-release" ],
+      "environment": {
+        "VCPKG_ROOT": "d:\\git\\vcpkg"
+      },
+      "cacheVariables": {
+        "VCPKG_INSTALL_OPTIONS": "--x-scripts-root=d:\\git\\vcpkg\\scripts"
+      }
+    }
+  ]
+}
