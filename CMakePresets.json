@@ -22,7 +22,7 @@
         {
             "name": "base-windows",
             "hidden": true,
-            "generator": "Visual Studio 17 2022",
+            "generator": "Visual Studio 18 2026",
             "cacheVariables": {
                 "CLI_OVPNDCOWIN": {
                     "value": "ON",
